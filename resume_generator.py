@@ -3,7 +3,6 @@ import argparse
 import yaml
 import jsonschema
 from pathlib import Path
-from icecream import ic
 from jinja2 import Environment, FileSystemLoader
 from weasyprint import HTML
 
