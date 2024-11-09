@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ name }}'s Resume</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/heroicons@1.0.6/outline.js"></script>
+    <style>
+        @media print {
+            body {
+                background-color: white !important;
+                margin: 0;
+            }
+            .container {
+                border: none;
+            }
+        }
+        .profile-pic {
+            width: 100px; /* Adjust size as needed */
+            height: 100px; /* Adjust size as needed */
+            border-radius: 50%; /* Circular image */
+            object-fit: cover; /* Maintain aspect ratio */
+        }
+        .icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <div class="container max-w-4xl mx-auto p-8 bg-white shadow-lg rounded-lg flex">
+        <div class="flex-none">
+            <img src="path/to/profile-picture.jpg" alt="Profile Picture" class="profile-pic"> <!-- Replace with actual image path -->
+        </div>
+        <div class="flex-1 ml-6">
+            <header class="mb-6">
+                <h1 class="text-4xl font-bold text-orange-600">{{ name }}</h1>
+                <p class="text-lg text-gray-700">{{ description }}</p>
+                <div class="mt-4">
+                    <p>Email: <a href="mailto:{{ contact.email }}" class="text-blue-600 hover:underline">{{ contact.email }}</a></p>
+                    <p>Phone: <span class="text-gray-700">{{ contact.phone }}</span></p>
+                    <p>Address: <span class="text-gray-700">{{ contact.address }}</span></p>
+                </div>
+            </header>
+
+            <section class="mb-6">
+                <h2 class="text-2xl font-semibold text-orange-500">
+                    <svg class="icon inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m-3-3H9m3-4a4 4 0 100-8 4 4 0 000 8z" />
+                    </svg>
+                    Experience
+                </h2>
+                {% for job in experience %}
+                    <div class="mb-4">
+                        <h3 class="text-xl font-semibold text-gray-800">{{ job.title }} - {{ job.company }} <span class="year">({{ job.duration }})</span></h3>
+                        <p class="text-lg text-gray-600">{{ job.description }}</p>
+                        <p class="font-semibold">Responsibilities:</p>
+                        <ul class="list-disc list-inside ml-4 mb-2">
+                            {% for responsibility in job.responsibilities %}
+                                <li>{{ responsibility }}</li>
+                            {% endfor %}
+                        </ul>
+                        <p class="font-semibold">Technologies:</p>
+                        <ul class="list-disc list-inside ml-4 mb-4">
+                            {% for tech in job.technologies %}
+                                <li>{{ tech }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endfor %}
+            </section>
+
+            <section class="mb-6">
+                <h2 class="text-2xl font-semibold text-orange-500">
+                    <svg class="icon inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m-3-3H9m3-4a4 4 0 100-8 4 4 0 000 8z" />
+                    </svg>
+                    Education
+                </h2>
+                <ul class="list-disc list-inside mb-4">
+                    {% for edu in education %}
+                        <li class="mb-1"><strong>{{ edu.institution }}</strong> <span class="year">({{ edu.year }})</span></li>
+                    {% endfor %}
+                </ul>
+            </section>
+
+            <section class="mb-6">
+                <h2 class="text-2xl font-semibold text-orange-500">
+                    <svg class="icon inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m-3-3H9m3-4a4 4 0 100-8 4 4 0 000 8z" />
+                    </svg>
+                    Certificates
+                </h2>
+                <ul class="list-disc list-inside mb-4">
+                    {% for cert in certificates %}
+                        <li class="mb-1"><strong>{{ cert.name }}</strong> <span class="year">({{ cert.year }})</span></li>
+                    {% endfor %}
+                </ul>
+            </section>
+
+            <section class="mb-6">
+                <h2 class="text-2xl font-semibold text-orange-500">
+                    <svg class="icon inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m-3-3H9m3-4a4 4 0 100-8 4 4 0 000 8z" />
+                    </svg>
+                    Languages
+                </h2>
+                <ul class="list-disc list-inside mb-4">
+                    {% for lang in languages %}
+                        <li class="mb-1">{{ lang }}</li>
+                    {% endfor %}
+                </ul>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-semibold text-orange-500">
+                    <svg class="icon inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m-3-3H9m3-4a4 4 0 100-8 4 4 0 000 8z" />
+                    </svg>
+                    Personal Projects
+                </h2>
+                <ul class="list-disc list-inside mb-4">
+                    {% for project in personal_projects %}
+                        <li class="mb-1">{{ project }}</li>
+                    {% endfor %}
+                </ul>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

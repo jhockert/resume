@@ -1,0 +1,120 @@
+name: Jonas Höckert
+description: | 
+  Passionate IT professional with extensive experience in technical support, consulting, and DevOps. Committed to delivering exceptional service and continuously improving processes to enhance efficiency.
+
+experience:
+  - title: IT Consultant - DevOps
+    company: Nexer Infrastructure
+    duration: "2022"
+    description: |
+      Contributed to the pipeline group within Saab's Combat Systems division. Responsibilities included developing and maintaining internal tools for the development environment, managing CI/CD pipelines, and providing user support to developers.
+    responsibilities:
+      - Refactored Ansible code and established development environments across multiple sites
+      - Designed K3s clusters and created .deb packages
+      - Developed CLI tools and built Docker containers
+      - Automated application release processes
+    technologies:
+      - Ansible
+      - Jenkins
+      - Grafana
+      - Go
+      - Python
+      - Bash
+      - VMware
+      - K3s
+
+  - title: IT Support Technician
+    company: Wallenstam
+    duration: "2019 - 2022"
+    description: |
+      Delivered technical support within Wallenstam's internal IT organization. Responsibilities included troubleshooting technology issues, packaging for SCCM/MECM, and providing technical guidance.
+    responsibilities:
+      - Provided user support and resolved technical issues
+      - Managed and troubleshot servers, networks, and firewalls
+      - Served as the system owner for the ticketing system Easit
+    technologies:
+      - SCCM/MECM
+      - Juniper
+      - Active Directory
+      - Exchange On-Prem
+      - Office 365
+      - Azure AD
+
+  - title: Technical Consultant
+    company: Atea Sverige
+    duration: "2019"
+    description: |
+      Collaborated with a team of senior generalist technicians, providing IT support and project management for clients lacking dedicated IT departments.
+    responsibilities:
+      - Managed Windows 10 clients and mobile devices
+      - Participated in network migration projects, replacing hardware with Cisco Meraki
+      - Engaged with suppliers and contributed to internal projects
+    technologies:
+      - Windows 10
+      - MDM
+      - Cisco Meraki
+
+  - title: IT Consultant
+    company: Softronic AB
+    duration: "2014 - 2016"
+    description: |
+      Provided comprehensive IT support for Fryshuset and KFUM Söder, establishing processes for hardware management and delivering direct user support.
+    responsibilities:
+      - Supported both Mac OSX and Windows environments
+      - Managed server administration and performed hardware repairs
+      - Led an inventory project for over 1,000 computers
+    technologies:
+      - Active Directory
+      - Print Servers
+      - Hardware Repair
+
+  - title: IT Consultant
+    company: Talangjägarna Consulting AB
+    duration: "2017"
+    description: |
+      Worked as part of Atea's Onsite Services team, providing direct support to clients in their daily operations.
+    responsibilities:
+      - Conducted technical tests and facilitated large video conferences
+      - Managed printer maintenance and troubleshooting
+      - Performed client reinstallation and general troubleshooting
+    technologies:
+      - Cisco Video Systems
+
+  - title: Service Desk Technician
+    company: Softronic AB
+    duration: "2012 - 2014"
+    description: |
+      Provided support for software, hardware, and operational systems for multiple clients, utilizing various ticketing systems to manage requests.
+    responsibilities:
+      - Delivered support via phone and email
+      - Assisted with products such as Active Directory, Windows, and Citrix
+    technologies:
+      - Active Directory
+      - Windows (XP, 7, 8, Server 2003, 2008, 2012)
+      - Citrix
+      - Microsoft Office
+
+education:
+  - institution: IT-Gymnasiet Sundbyberg (Systemvetenskap)
+    year: "2008-2011"
+  - institution: Yoshida Institute of Japanese Language
+    year: "2016-2017"
+  - institution: "LFS458: Kubernetes Administration"
+    year: "2022"
+
+certificates:
+  - name: "LFS458: Kubernetes Administration (Participation Certificate)"
+    year: "2022"
+  - name: "Japanese Language Proficiency Test - N3 Level"
+    year: "2017"
+
+languages:
+  - Swedish
+  - English
+  - Japanese
+
+personal_projects:
+  - Networking: Pfsense, OPNSense, Cisco Meraki, Unifi
+  - Platforms: Linux, KVM, Docker, Kubernetes
+  - Hosting: Nginx, Traefik, MariaDB, Nextcloud
+  - Development: Bootstrap, PHP, HTML, CSS
