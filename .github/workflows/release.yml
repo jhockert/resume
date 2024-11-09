@@ -8,17 +8,21 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v4
-      - name: Run Python script
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.13' 
+          python-version: '3.13'
           cache: 'pip' # caching pip dependencies
-      - run: |
-          pip install -r requirements.txt
-          python resume_generator.py
+
+      - name: Install requirements
+        run: pip install -r requirements.txt
+
+      - name: Run Python script
+        run: python resume_generator.py
        
       - name: Upload PDF to Releases
         uses: softprops/action-gh-release@v1
