@@ -1,7 +1,8 @@
 name: Jonas Höckert
 description: | 
   Passionate IT professional with extensive experience in technical support, consulting, and DevOps. Committed to delivering exceptional service and continuously improving processes to enhance efficiency.
-
+contact:
+  email: jonas@jhockert.se
 experience:
   - title: IT Consultant - DevOps
     company: Nexer Infrastructure

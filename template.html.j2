@@ -41,8 +41,8 @@
                 <p class="text-lg text-gray-700">{{ description }}</p>
                 <div class="mt-4">
                     <p>Email: <a href="mailto:{{ contact.email }}" class="text-blue-600 hover:underline">{{ contact.email }}</a></p>
-                    <p>Phone: <span class="text-gray-700">{{ contact.phone }}</span></p>
-                    <p>Address: <span class="text-gray-700">{{ contact.address }}</span></p>
+                    {% if contact.phone is defined %}<p>Phone: <span class="text-gray-700">{{ contact.phone }}</span></p>{% endif %}
+                     {% if contact.phone is defined %}<p>Address: <span class="text-gray-700">{{ contact.address }}</span></p>{% endif %}
                 </div>
             </header>
 

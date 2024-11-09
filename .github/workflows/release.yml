@@ -31,7 +31,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Run Python script
+      - name: Create http folder
         run: |
           mkdir http
           mv resume.html http/

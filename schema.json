@@ -8,6 +8,17 @@
     "description": {
       "type": "string"
     },
+    "contact": {
+      "items": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
+          }
+        },
+        "required": ["email"]
+      }
+    },
     "education": {
       "type": "array",
       "items": {
