@@ -27,7 +27,7 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v2
         with:
-          token: ${{ secrets.resume-release-publish }}
+          token: ${{ secrets.RESUME_ACTIONS }}
           files: resume.pdf
        
       - name: Move files
@@ -39,5 +39,5 @@ jobs:
       - name: Deploy HTML to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.resume-release-publish }}
+          github_token: ${{ secrets.RESUME_ACTIONS }}
           publish_dir: ./public 
