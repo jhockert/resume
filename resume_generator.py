@@ -5,6 +5,7 @@ import jsonschema
 from pathlib import Path
 from jinja2 import Environment, FileSystemLoader
 from weasyprint import HTML
+import subprocess
 
 # Define the schema for validation
 def load_schema(schema_path):
@@ -16,50 +17,62 @@ def validate_yaml(yaml_data, schema):
     """Validate YAML data against the provided schema."""
     jsonschema.validate(instance=yaml_data, schema=schema)
 
-def generate_html(yaml_data, template_path):
+def get_git_tag():
+    """Retrieve the current Git tag if available."""
+    try:
+        git_tag = subprocess.check_output(["git", "describe", "--tags"], text=True).strip()
+    except subprocess.CalledProcessError:
+        git_tag = "N/A"
+    return git_tag
+
+def generate_html(output, yaml_data, template_path):
     """Generate HTML from YAML data using the provided template."""
     env = Environment(loader=FileSystemLoader(os.path.dirname(template_path)))
     template = env.get_template(os.path.basename(template_path))
     html_content = template.render(yaml_data)
+
+    with open(output, 'w', encoding='utf-8') as f:
+        f.write(html_content)
+
     return html_content
 
 def generate_pdf(html_content, output_pdf):
     """Generate PDF from HTML content."""
     HTML(string=html_content).write_pdf(output_pdf)
 
-def main():
+def parse_args():
+    """Parse arguments."""
     parser = argparse.ArgumentParser(description="Generate resume from YAML config file.")
     parser.add_argument("--config", default="config.yaml", type=Path, help="Path to the YAML config file.")
-    parser.add_argument("--contact", type=Path, help="Optional contact info file.")
     parser.add_argument("--template", default="template.html.j2", type=Path, help="Path to the HTML template file.")
     parser.add_argument("--schema", default="schema.json", help="Path to the JSON schema file.")
+    parser.add_argument("--static", default="static", type=Path, help="Path to the static folder.")
     parser.add_argument("--output-html", default="resume.html", type=Path, help="Path to the output HTML file.")
     parser.add_argument("--output-pdf", default="resume.pdf", type=Path, help="Path to the output PDF file.")
-    args = parser.parse_args()
+    parser.add_argument("--contact", type=Path, help="Optional contact info file.")
+    return parser.parse_args()
 
-    # Load YAML data
+def main():
+    args = parse_args()
+
     with open(args.config, 'r', encoding='utf-8') as f:
         config_data = yaml.safe_load(f)
     
+    # Load optional private contact info
     if args.contact is not None:
         with open(args.contact, 'r', encoding='utf-8') as f:
             contact_data = yaml.safe_load(f)
             config_data = {**config_data, **contact_data}
 
-    # Load JSON schema
     schema = load_schema(args.schema)
 
-    # Validate YAML data against schema
     validate_yaml(config_data, schema)
 
-    # Generate HTML content
-    html_content = generate_html(config_data, args.template)
+    # Set config data
+    config_data['git_tag'] = get_git_tag()
+    config_data['static'] = args.static.absolute()
 
-    # Save HTML content to file
-    with open(args.output_html, 'w', encoding='utf-8') as f:
-        f.write(html_content)
-
-    # Generate PDF from HTML content
+    html_content = generate_html(args.output_html, config_data, args.template)
     generate_pdf(html_content, args.output_pdf)
 
 if __name__ == "__main__":

@@ -45,7 +45,7 @@
           "company": {
             "type": "string"
           },
-          "duration": {
+          "period": {
             "type": "string"
           },
           "description": {
@@ -64,7 +64,7 @@
             }
           }
         },
-        "required": ["title", "company", "duration"]
+        "required": ["title", "company", "period"]
       }
     }
   },

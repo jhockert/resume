@@ -6,7 +6,7 @@ contact:
 experience:
   - title: IT Consultant - DevOps
     company: Nexer Infrastructure
-    duration: "2022"
+    period: "2022"
     description: |
       Contributed to the pipeline group within Saab's Combat Systems division. Responsibilities included developing and maintaining internal tools for the development environment, managing CI/CD pipelines, and providing user support to developers.
     responsibilities:
@@ -26,7 +26,7 @@ experience:
 
   - title: IT Support Technician
     company: Wallenstam
-    duration: "2019 - 2022"
+    period: "2019 - 2022"
     description: |
       Delivered technical support within Wallenstam's internal IT organization. Responsibilities included troubleshooting technology issues, packaging for SCCM/MECM, and providing technical guidance.
     responsibilities:
@@ -43,7 +43,7 @@ experience:
 
   - title: Technical Consultant
     company: Atea Sverige
-    duration: "2019"
+    period: "2019"
     description: |
       Collaborated with a team of senior generalist technicians, providing IT support and project management for clients lacking dedicated IT departments.
     responsibilities:
@@ -57,7 +57,7 @@ experience:
 
   - title: IT Consultant
     company: Softronic AB
-    duration: "2014 - 2016"
+    period: "2014 - 2016"
     description: |
       Provided comprehensive IT support for Fryshuset and KFUM Söder, establishing processes for hardware management and delivering direct user support.
     responsibilities:
@@ -71,7 +71,7 @@ experience:
 
   - title: IT Consultant
     company: Talangjägarna Consulting AB
-    duration: "2017"
+    period: "2017"
     description: |
       Worked as part of Atea's Onsite Services team, providing direct support to clients in their daily operations.
     responsibilities:
@@ -83,7 +83,7 @@ experience:
 
   - title: Service Desk Technician
     company: Softronic AB
-    duration: "2012 - 2014"
+    period: "2012 - 2014"
     description: |
       Provided support for software, hardware, and operational systems for multiple clients, utilizing various ticketing systems to manage requests.
     responsibilities:
