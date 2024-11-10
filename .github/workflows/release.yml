@@ -23,21 +23,24 @@ jobs:
 
       - name: Run Python script
         run: python resume_generator.py
-       
-      - name: Upload PDF to Releases
-        uses: softprops/action-gh-release@v1
-        with:
-          files: resume.pdf
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Create http folder
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        if: github.ref == 'refs/heads/main'
+        with:
+          files: |
+           resume.html
+           resume.pdf
+       
+      - name: Move files
         run: |
-          mkdir http
-          mv resume.html http/
+          mkdir -p ./public
+          mv ./resume.html ./public/
+          mv ./static ./public/
 
       - name: Deploy HTML to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
+        if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: http 
+          publish_dir: ./public 
