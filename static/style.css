@@ -41,6 +41,10 @@ section {
     margin-bottom: 20px;
 }
 
+.no-page-break-inside {
+    page-break-inside: avoid;
+}
+
 header {
     display: flex;
     flex-wrap: nowrap;
@@ -75,11 +79,6 @@ header {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 4px;
-}
-
-.job-entry {
-    page-break-inside: avoid;
-
 }
 
 .contact-info p,
