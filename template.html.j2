@@ -25,7 +25,6 @@
         <section>
             <h2>Contact info</h2>
             <div class="contact-info">
-                {% if contact.email is defined %}
                 <p>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="icon">
@@ -35,7 +34,6 @@
                     <a href="mailto:{{ contact.email }}" style="color: #1A73E8; text-decoration: none;">{{
                         contact.email }}</a>
                 </p>
-                {% endif %}
                 {% if contact.phone is defined %}
                 <p>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -62,6 +60,7 @@
         </section>
         {% endif %}
 
+        {% if experience is defined and experience %}
         <section>
             <h2>Experience</h2>
             {% for job in experience %}
@@ -87,12 +86,14 @@
             </div>
             {% endfor %}
         </section>
+        {% endif %}
 
         {% if education is defined and education %}
         <section>
             <h2>Education</h2>
             {% for edu in education %}
-            <p><strong>{{ edu.institution }}</strong> - {{ edu.degree }} <span class="text-muted">({{ edu.year
+            <p><strong>{{ edu.institution }}</strong>{% if edu.degree is defined %} - {{ edu.degree }}{% endif %}<span
+                    class="text-muted"> ({{ edu.year
                     }})</span></p>
             {% endfor %}
         </section>
@@ -106,19 +107,30 @@
         </section>
         {% endif %}
 
+        {% if languages is defined and languages %}
+        <section>
+            <h2>Languages</h2>
+            {% for language in languages %}
+            <p>{{ language }}</p>
+            {% endfor %}
+        </section>
+        {% endif %}
+
         {% if personal_projects is defined and personal_projects %}
         <section>
             <h2>Personal projects</h2>
             {% for project in personal_projects %}
-            <p><strong>{{ project.area }}:</strong>{% for tech in project.technologies %} {{ tech }}{% if not loop.last %}, {% endif %}{% endfor %}</p>
+            <p><strong>{{ project.area }}:</strong>{% for tech in project.technologies %} {{ tech }}{% if not loop.last
+                %}, {% endif %}{% endfor %}</p>
             {% endfor %}
         </section>
         {% endif %}
 
         <div class="footer">
-            <p>This is a generated file. For the source code, visit <a
-                    href="https://github.com/jhockert/resume">github.com/jhockert/resume</a>.</p>
-            <p>View the latest web version at <a href="https://cv.jhockert.se">cv.jhockert.se</a>.</p>
+            <p>This is a generated file. For the source code, visit <a href="{{ links.github.link }}">{{
+                    links.github.repo }}</a>.</p>
+            <p>View the latest web version at <a href="{{ links.page.link }}">{{ links.page.name }}</a>.</p>
+            <p>Latest PDF can be found at <a href="{{ links.github.releases }}">{{ links.github.repo }}/releases</a></p>
             <p>Version: {{ git_tag }}</p>
         </div>
     </div>

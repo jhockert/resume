@@ -1,6 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
+  "additionalProperties": false,
   "properties": {
     "name": {
       "type": "string"
@@ -9,35 +10,29 @@
       "type": "string"
     },
     "contact": {
-      "items": {
-        "type": "object",
-        "properties": {
-          "email": {
-            "type": "string"
-          }
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "email": {
+          "type": "string"
         },
-        "required": ["email"]
-      }
-    },
-    "education": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "institution": {
-            "type": "string"
-          },
-          "year": {
-            "type": "string"
-          }
+        "location": {
+          "type": "string"
         },
-        "required": ["institution", "year"]
-      }
+        "phone": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "email"
+      ]
     },
     "experience": {
       "type": "array",
+      "additionalProperties": false,
       "items": {
         "type": "object",
+        "additionalProperties": false,
         "properties": {
           "title": {
             "type": "string"
@@ -57,16 +52,139 @@
               "type": "string"
             }
           },
-          "keywords": {
+          "technologies": {
             "type": "array",
             "items": {
               "type": "string"
             }
           }
         },
-        "required": ["title", "company", "period"]
+        "required": [
+          "title",
+          "company",
+          "period",
+          "description"
+        ]
       }
+    },
+    "education": {
+      "type": "array",
+      "additionalProperties": false,
+      "items": {
+        "type": "object",
+        "properties": {
+          "institution": {
+            "type": "string"
+          },
+          "year": {
+            "type": "string"
+          },
+          "degree": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "institution",
+          "year"
+        ]
+      }
+    },
+    "certificates": {
+      "type": "array",
+      "additionalProperties": false,
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "year": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "year"
+        ]
+      }
+    },
+    "languages": {
+      "type": "array",
+      "additionalProperties": false,
+      "items": {
+        "type": "string"
+      }
+    },
+    "personal_projects": {
+      "type": "array",
+      "additionalProperties": false,
+      "items": {
+        "type": "object",
+        "properties": {
+          "area": {
+            "type": "string"
+          },
+          "technologies": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "area",
+          "technologies"
+        ]
+      }
+    },
+    "links": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "github": {
+          "type": "object",
+          "properties": {
+            "repo": {
+              "type": "string"
+            },
+            "link": {
+              "type": "string"
+            },
+            "releases": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "repo",
+            "link",
+            "releases"
+          ]
+        },
+        "page": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "link": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "link"
+          ]
+        }
+      },
+      "required": [
+        "github",
+        "page"
+      ]
     }
   },
-  "required": ["name", "education", "experience"]
+  "required": [
+    "name",
+    "contact",
+    "links"
+  ]
 }

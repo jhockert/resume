@@ -1,3 +1,12 @@
+# $schema: "./schema.json"
+links:
+  github:
+    repo: github.com/jhockert/resume
+    link: https://github.com/jhockert/resume
+    releases: https://github.com/jhockert/resume/releases
+  page:
+    name: jhockert.github.io/resume
+    link: https://jhockert.github.io/resume
 name: Jonas Höckert
 description: >-
   Passionate IT professional with extensive experience in technical support, consulting, and DevOps. 
