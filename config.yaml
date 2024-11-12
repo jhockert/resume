@@ -1,17 +1,46 @@
 name: Jonas Höckert
-description: | 
-  Passionate IT professional with extensive experience in technical support, consulting, and DevOps. Committed to delivering exceptional service and continuously improving processes to enhance efficiency.
+description: >-
+  Passionate IT professional with extensive experience in technical support, consulting, and DevOps. 
+  Committed to delivering exceptional service and continuously improving processes to enhance efficiency.
+  I've been playing around with computers from an early age creating game servers and trying out different technologies. 
+  And now I get to work with my hobby.
 contact:
   email: jonas@jhockert.se
+  location: "Sundbyberg, Stockholm"
 experience:
   - title: IT Consultant - DevOps
+    company: Brickstone IT
+    period: "2023 - Present"
+    description: >-
+      Continuing my assignment at Saab. Contributed to the pipeline group within Saab's Naval Combat Systems division.
+      Responsibilities included developing and maintaining internal tools for the development environment, managing CI/CD pipelines, and providing user support to developers.
+      Provide technical advice and guidance to team members and stakeholders.
+    responsibilities:
+      - Configuration as code using ansible
+      - Scripting using Go, bash and python
+      - Automation using jenkins for CI/CD pipelines with scripted pipeline framework
+      - Working with 9LV software platform
+      - Project Management
+    technologies:
+      - Ansible
+      - Jenkins
+      - Grafana
+      - Go
+      - Python
+      - docker
+      - Bash
+      - VMware
+      - Linux
+
+  - title: IT Consultant - DevOps
     company: Nexer Infrastructure
-    period: "2022"
-    description: |
-      Contributed to the pipeline group within Saab's Combat Systems division. Responsibilities included developing and maintaining internal tools for the development environment, managing CI/CD pipelines, and providing user support to developers.
+    period: "2022 - 2023"
+    description: >-
+      Contributed to the pipeline group within Saab's Naval Combat Systems division.
+      Responsibilities included developing and maintaining internal tools for the development environment, managing CI/CD pipelines, and providing user support to developers.
     responsibilities:
       - Refactored Ansible code and established development environments across multiple sites
-      - Designed K3s clusters and created .deb packages
+      - Designed K3s cluster
       - Developed CLI tools and built Docker containers
       - Automated application release processes
     technologies:
@@ -20,9 +49,11 @@ experience:
       - Grafana
       - Go
       - Python
+      - docker
       - Bash
       - VMware
       - K3s
+      - Linux
 
   - title: IT Support Technician
     company: Wallenstam
@@ -31,8 +62,11 @@ experience:
       Delivered technical support within Wallenstam's internal IT organization. Responsibilities included troubleshooting technology issues, packaging for SCCM/MECM, and providing technical guidance.
     responsibilities:
       - Provided user support and resolved technical issues
-      - Managed and troubleshot servers, networks, and firewalls
+      - Management and troubleshooting of servers, networks, applications and firewalls
+      - Planning and execution for relocation of server room
+      - Set up networking for edge sites
       - Served as the system owner for the ticketing system Easit
+      - Facilitating large scale meetings
     technologies:
       - SCCM/MECM
       - Juniper
@@ -40,34 +74,43 @@ experience:
       - Exchange On-Prem
       - Office 365
       - Azure AD
+      - Checkpoint
+      - Microsoft SQL Server
+      - Veeam
+      - Powershell and PSADT
 
-  - title: Technical Consultant
+  - title: IT Consultant
     company: Atea Sverige
     period: "2019"
     description: |
-      Collaborated with a team of senior generalist technicians, providing IT support and project management for clients lacking dedicated IT departments.
+      Switches teams within Atea to a team of senior generalist technicians, providing IT support and project management for clients lacking dedicated IT departments or needing additional personnel.
     responsibilities:
       - Managed Windows 10 clients and mobile devices
       - Participated in network migration projects, replacing hardware with Cisco Meraki
       - Engaged with suppliers and contributed to internal projects
+      - Migrated from Clonezilla to MDT
     technologies:
-      - Windows 10
-      - MDM
+      - Windows 7-10
+      - Microsoft Server
+      - Active Directory
+      - Snow MDM
+      - Microsoft Deployment Toolkit
       - Cisco Meraki
 
   - title: IT Consultant
-    company: Softronic AB
-    period: "2014 - 2016"
+    company: Atea
+    period: "2018"
     description: |
-      Provided comprehensive IT support for Fryshuset and KFUM Söder, establishing processes for hardware management and delivering direct user support.
+      Directly hired by Atea after my time with Talangjägarna. Delivered consulting services to clients, addressing a wide array of IT-related challenges and providing tailored solutions.
     responsibilities:
-      - Supported both Mac OSX and Windows environments
-      - Managed server administration and performed hardware repairs
-      - Led an inventory project for over 1,000 computers
+      - Repaired and managed Point-of-Service systems
+      - Offered on-site technical support
+      - Administered server and network infrastructure
+      - Re-imaging of computers
     technologies:
+      - Microsoft Server
+      - Windows 10
       - Active Directory
-      - Print Servers
-      - Hardware Repair
 
   - title: IT Consultant
     company: Talangjägarna Consulting AB
@@ -80,12 +123,34 @@ experience:
       - Performed client reinstallation and general troubleshooting
     technologies:
       - Cisco Video Systems
+      - Active Directory
+      - Windows 10
+      - Printers
+
+  - title: IT Consultant
+    company: Softronic AB
+    period: "2014 - 2016"
+    description: |
+      Provided IT support for Fryshuset, Akademikernas erkanda A-kassa. Establishing processes for hardware management and delivering direct user support.
+    responsibilities:
+      - Supported both Mac OSX and Windows environments
+      - Server administration and hardware repairs
+      - Led an inventory project for over 1,000 computers
+    technologies:
+      - Active Directory
+      - Windows 10
+      - Windows Server
+      - HPDM
+      - SafeCom
+      - HP Networking
+      - Hardware Repair (Mac and PC)
 
   - title: Service Desk Technician
     company: Softronic AB
     period: "2012 - 2014"
-    description: |
+    description: >-
       Provided support for software, hardware, and operational systems for multiple clients, utilizing various ticketing systems to manage requests.
+      Some on-site support provided for Riksteatern on multiple sites.
     responsibilities:
       - Delivered support via phone and email
       - Assisted with products such as Active Directory, Windows, and Citrix
@@ -93,7 +158,16 @@ experience:
       - Active Directory
       - Windows (XP, 7, 8, Server 2003, 2008, 2012)
       - Citrix
-      - Microsoft Office
+      - SAP CDT
+      - Microsoft Office (2003, 2004, 2010, 2013)
+
+  - title: Machine operator
+    company: Packningsspecialisten
+    period: "2011"
+    description: |
+      Short term work in a factory specializing in gaskets.
+    responsibilities:
+      - Producing and packaging rubber gaskets
 
 education:
   - institution: IT-Gymnasiet Sundbyberg (Systemvetenskap)
@@ -115,7 +189,27 @@ languages:
   - Japanese
 
 personal_projects:
-  - Networking: Pfsense, OPNSense, Cisco Meraki, Unifi
-  - Platforms: Linux, KVM, Docker, Kubernetes
-  - Hosting: Nginx, Traefik, MariaDB, Nextcloud
-  - Development: Bootstrap, PHP, HTML, CSS
+  - area: Networking
+    technologies: 
+      - Pfsense
+      - OPNSense
+      - Cisco Meraki
+      - Unifi
+  - area: Platforms
+    technologies: 
+      - Linux
+      - KVM
+      - Docker
+      - Kubernetes
+  - area: Hosting
+    technologies:
+      - Nginx
+      - Traefik
+      - MariaDB
+      - Nextcloud
+  - area: Development
+    technologies:
+      - Bootstrap
+      - PHP
+      - HTML
+      - CSS
