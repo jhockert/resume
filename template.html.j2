@@ -64,7 +64,7 @@
         <section>
             <h2>Experience</h2>
             {% for job in experience %}
-            <div class="job-entry">
+            <div class="no-page-break-inside">
                 <p class="job-title">{{ job.title }} - {{ job.company }} <span class="text-muted">({{ job.period
                         }})</span></p>
                 <p>{{ job.description }}</p>
@@ -89,7 +89,7 @@
         {% endif %}
 
         {% if education is defined and education %}
-        <section>
+        <section class="no-page-break-inside">
             <h2>Education</h2>
             {% for edu in education %}
             <p><strong>{{ edu.institution }}</strong>{% if edu.degree is defined %} - {{ edu.degree }}{% endif %}<span
@@ -100,7 +100,7 @@
         {% endif %}
 
         {% if certificates is defined and certificates %}
-        <section>
+        <section class="no-page-break-inside">
             <h2>Certificates</h2>
             {% for cert in certificates %}
             <p><strong>{{ cert.name }}</strong> <span class="text-muted">({{ cert.year }})</span></p> {% endfor %}
@@ -108,7 +108,7 @@
         {% endif %}
 
         {% if languages is defined and languages %}
-        <section>
+        <section class="no-page-break-inside">
             <h2>Languages</h2>
             {% for language in languages %}
             <p>{{ language }}</p>
@@ -117,7 +117,7 @@
         {% endif %}
 
         {% if personal_projects is defined and personal_projects %}
-        <section>
+        <section class="no-page-break-inside">
             <h2>Personal projects</h2>
             {% for project in personal_projects %}
             <p><strong>{{ project.area }}:</strong>{% for tech in project.technologies %} {{ tech }}{% if not loop.last
@@ -126,7 +126,7 @@
         </section>
         {% endif %}
 
-        <div class="footer">
+        <div class="footer no-page-break-inside">
             <p>This is a generated file. For the source code, visit <a href="{{ links.github.link }}">{{
                     links.github.repo }}</a>.</p>
             <p>View the latest web version at <a href="{{ links.page.link }}">{{ links.page.name }}</a>.</p>
