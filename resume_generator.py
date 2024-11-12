@@ -6,7 +6,7 @@ from pathlib import Path
 import yaml
 import jsonschema
 from jinja2 import Environment, FileSystemLoader
-from weasyprint import HTML
+from weasyprint import HTML, CSS
 
 # Define the schema for validation
 def load_schema(schema_path):
@@ -69,15 +69,25 @@ def generate_html(output, yaml_data, template_path):
 
     return html_content
 
-def generate_pdf(html_content, output_pdf):
+def generate_pdf(html_content, output_pdf, static_path):
     """
     Generate a PDF file from HTML content.
 
+    This function:
+    - Gets the path for the stylesheet, style.css
+    - Gets the path for the profile picture, profile.jpeg, in a str format
+    - Replaces the path in the html_content variable with one that is compatible with weasyprint pdf generation
+    - Sets the stylesheets keyword argument when writing PDF
+
     Args:
         html_content (str): The HTML content to convert to PDF.
-        output_pdf (str or Path): The output path for the generated PDF.
+        output_pdf (Path): The output path for the generated PDF.
+        static_path (Path): The absolute path to the static folder.
     """
-    HTML(string=html_content).write_pdf(output_pdf)
+    css_path = static_path / 'style.css'
+    profile_image_path =  str(static_path / 'profile.jpeg')
+    html_content = html_content.replace('static/profile.jpeg', str("file:///" + profile_image_path))
+    HTML(string=html_content).write_pdf(output_pdf, stylesheets=[CSS(css_path)])
 
 def parse_args():
     """
@@ -123,10 +133,9 @@ def main():
 
     # Set config data
     config_data['git_tag'] = get_git_tag()
-    config_data['static'] = args.static.absolute()
 
     html_content = generate_html(args.output_html, config_data, args.template)
-    generate_pdf(html_content, args.output_pdf)
+    generate_pdf(html_content, args.output_pdf, args.static.absolute())
 
 if __name__ == "__main__":
     main()
