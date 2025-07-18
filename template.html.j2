@@ -76,6 +76,14 @@
                     {% endfor %}
                 </ul>
                 {% endif %}
+                {% if job.achievments is defined and job.achievments %}
+                <p class="font-semibold">Achievments:
+                <ul class="list">
+                    {% for achievment in job.achievments %}
+                    <li>{{ achievment }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
                 {% if job.technologies is defined and job.technologies %}
                 <p class="font-semibold">Technologies:
                     {% for tech in job.technologies %}

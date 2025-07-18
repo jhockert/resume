@@ -52,6 +52,12 @@
               "type": "string"
             }
           },
+          "achievments": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
           "technologies": {
             "type": "array",
             "items": {

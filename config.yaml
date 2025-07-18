@@ -30,6 +30,10 @@ experience:
       - Automation using jenkins for CI/CD pipelines with scripted pipeline framework
       - Working with 9LV software platform
       - Project Management
+    achievments:
+      - Rewrote all ansible code and simplified the process of using it making it available to all team members
+      - Made build image site agnostic so that it can be used by all teams internationally
+      - Set up load balanced and fully encrypted visualisation service cluster including opensearch, grafana and others
     technologies:
       - Ansible
       - Jenkins
