@@ -69,7 +69,7 @@
                         }})</span></p>
                 <p>{{ job.description }}</p>
                 {% if job.responsibilities is defined and job.responsibilities %}
-                <p class="font-semibold">Responsibilities:
+                <p class="font-semibold"><b>Responsibilities</b>:
                 <ul class="list">
                     {% for responsibility in job.responsibilities %}
                     <li>{{ responsibility }}</li>
@@ -77,7 +77,7 @@
                 </ul>
                 {% endif %}
                 {% if job.achievments is defined and job.achievments %}
-                <p class="font-semibold">Achievments:
+                <p class="font-semibold"><b>Achievments</b>:
                 <ul class="list">
                     {% for achievment in job.achievments %}
                     <li>{{ achievment }}</li>
@@ -85,7 +85,7 @@
                 </ul>
                 {% endif %}
                 {% if job.technologies is defined and job.technologies %}
-                <p class="font-semibold">Technologies:
+                <p class="font-semibold"><b>Technologies</b>:
                     {% for tech in job.technologies %}
                     {{ tech }}{% if not loop.last %}, {% endif %}
                     {% endfor %}

@@ -18,44 +18,24 @@ contact:
   location: "Sundbyberg, Stockholm"
 experience:
   - title: IT Consultant - DevOps
-    company: Brickstone IT
-    period: "2023 - Present"
+    company: Nexer Infrastructure & Brickstone AB
+    period: "2022 - 2023"
     description: >-
-      Continuing my assignment at Saab. Contributed to the pipeline group within Saab's Naval Combat Systems division.
+      Full time consultant for Saab AB.
       Responsibilities included developing and maintaining internal tools for the development environment, managing CI/CD pipelines, and providing user support to developers.
-      Provide technical advice and guidance to team members and stakeholders.
     responsibilities:
+      - Developed CLI tools and built Docker containers including automation of releases
       - Configuration as code using ansible
       - Scripting using Go, bash and python
       - Automation using jenkins for CI/CD pipelines with scripted pipeline framework
       - Working with 9LV software platform
-      - Project Management
+      - Knowledge sharing by documentation and presentations
+      - Technical advisor as part of Saab Naval Combat Systems office relocation project
     achievments:
-      - Rewrote all ansible code and simplified the process of using it making it available to all team members
-      - Made build image site agnostic so that it can be used by all teams internationally
-      - Set up load balanced and fully encrypted visualisation service cluster including opensearch, grafana and others
-    technologies:
-      - Ansible
-      - Jenkins
-      - Grafana
-      - Go
-      - Python
-      - docker
-      - Bash
-      - VMware
-      - Linux
-
-  - title: IT Consultant - DevOps
-    company: Nexer Infrastructure
-    period: "2022 - 2023"
-    description: >-
-      Contributed to the pipeline group within Saab's Naval Combat Systems division.
-      Responsibilities included developing and maintaining internal tools for the development environment, managing CI/CD pipelines, and providing user support to developers.
-    responsibilities:
-      - Refactored Ansible code and established development environments across multiple sites
-      - Designed K3s cluster
-      - Developed CLI tools and built Docker containers
-      - Automated application release processes
+      - Rewrote ansible code to fully maintain build environment infrastructure with configuration as code
+      - Automated agent bootstrapping using generic image accelerating build environment deployment
+      - Set up load balanced and fully encrypted on-prem visualisation service cluster including opensearch, grafana and others
+      - Set up on-prem kubernetes cluster based on k3s using ansible and ArgoCD
     technologies:
       - Ansible
       - Jenkins
@@ -72,7 +52,7 @@ experience:
     company: Wallenstam
     period: "2019 - 2022"
     description: |
-      Delivered technical support within Wallenstam's internal IT organization. Responsibilities included troubleshooting technology issues, packaging for SCCM/MECM, and providing technical guidance.
+      Delivered technical support within Wallenstam's internal IT organization. Responsibilities included troubleshooting issues, packaging for SCCM/MECM, and providing technical guidance.
     responsibilities:
       - Provided user support and resolved technical issues
       - Management and troubleshooting of servers, networks, applications and firewalls
@@ -94,14 +74,19 @@ experience:
 
   - title: IT Consultant
     company: Atea Sverige
-    period: "2019"
+    period: "2018-2019"
     description: |
-      Switches teams within Atea to a team of senior generalist technicians, providing IT support and project management for clients lacking dedicated IT departments or needing additional personnel.
+      Directly hired by Atea after my time with Talangjägarna. Switches teams within Atea to a team of senior generalist technicians, providing IT support and project management for clients lacking dedicated IT departments or needing additional personnel.
     responsibilities:
       - Managed Windows 10 clients and mobile devices
       - Participated in network migration projects, replacing hardware with Cisco Meraki
       - Engaged with suppliers and contributed to internal projects
-      - Migrated from Clonezilla to MDT
+      - Repaired and managed Point-of-Service systems
+      - Offered on-site technical support
+      - Administered server and network infrastructure
+      - Re-imaging of computers
+    achievments:
+      - Migrated customer client deployment from Clonezilla to MDT setup accelerating deployment of client computers
     technologies:
       - Windows 7-10
       - Microsoft Server
@@ -109,24 +94,12 @@ experience:
       - Snow MDM
       - Microsoft Deployment Toolkit
       - Cisco Meraki
-
-  - title: IT Consultant
-    company: Atea
-    period: "2018"
-    description: |
-      Directly hired by Atea after my time with Talangjägarna. Delivered consulting services to clients, addressing a wide array of IT-related challenges and providing tailored solutions.
-    responsibilities:
-      - Repaired and managed Point-of-Service systems
-      - Offered on-site technical support
-      - Administered server and network infrastructure
-      - Re-imaging of computers
-    technologies:
       - Microsoft Server
       - Windows 10
       - Active Directory
 
   - title: IT Consultant
-    company: Talangjägarna Consulting AB
+    company: Talangjägarna Consulting AB for Atea Sverige
     period: "2017"
     description: |
       Worked as part of Atea's Onsite Services team, providing direct support to clients in their daily operations.
@@ -140,36 +113,26 @@ experience:
       - Windows 10
       - Printers
 
-  - title: IT Consultant
+  - title: Service Desk Technician & IT Consultant
     company: Softronic AB
-    period: "2014 - 2016"
-    description: |
-      Provided IT support for Fryshuset, Akademikernas erkanda A-kassa. Establishing processes for hardware management and delivering direct user support.
+    period: "2012 - 2016"
+    description: >-
+      Provided support for software, hardware, and operational systems for multiple clients, utilizing various ticketing systems to manage requests.
+      On-site support provided for customers as a consultant
     responsibilities:
       - Supported both Mac OSX and Windows environments
       - Server administration and hardware repairs
-      - Led an inventory project for over 1,000 computers
+      - Delivered support via phone and email
+      - Assisted with products such as Active Directory, Windows, and Citrix
+    achievments: 
+      - Led an inventory project for over 1,000 computers and established processes for hardware management
     technologies:
       - Active Directory
-      - Windows 10
-      - Windows Server
       - HPDM
       - SafeCom
       - HP Networking
       - Hardware Repair (Mac and PC)
-
-  - title: Service Desk Technician
-    company: Softronic AB
-    period: "2012 - 2014"
-    description: >-
-      Provided support for software, hardware, and operational systems for multiple clients, utilizing various ticketing systems to manage requests.
-      Some on-site support provided for Riksteatern on multiple sites.
-    responsibilities:
-      - Delivered support via phone and email
-      - Assisted with products such as Active Directory, Windows, and Citrix
-    technologies:
-      - Active Directory
-      - Windows (XP, 7, 8, Server 2003, 2008, 2012)
+      - Windows (XP, 7, 8, 10, Server 2003, 2008, 2012)
       - Citrix
       - SAP CDT
       - Microsoft Office (2003, 2004, 2010, 2013)
@@ -222,6 +185,7 @@ personal_projects:
       - Nextcloud
   - area: Development
     technologies:
+      - Django
       - Bootstrap
       - PHP
       - HTML
