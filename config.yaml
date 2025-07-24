@@ -9,10 +9,12 @@ links:
     link: https://jhockert.github.io/resume
 name: Jonas Höckert
 description: >-
-  Passionate IT professional with extensive experience in technical support, consulting, and DevOps. 
-  Committed to delivering exceptional service and continuously improving processes to enhance efficiency.
-  I've been playing around with computers from an early age creating game servers and trying out different technologies. 
-  And now I get to work with my hobby.
+ IT professional with solid experience in technical support, consulting, and DevOps.
+ Committed to delivering high-quality service and constantly improving processes to boost efficiency.
+ Started experimenting with computers and various technologies as a hobby from an early age,
+ now applying that curiosity and practical knowledge in a professional setting. 
+ Motivated to keep learning and growing—both technically, by deepening skills in programming and cloud services,
+ and personally, by strengthening communication and teamwork to contribute effectively in group environments
 contact:
   email: jonas@jhockert.se
   location: "Sundbyberg, Stockholm"
@@ -21,7 +23,7 @@ experience:
     company: Nexer Infrastructure & Brickstone AB
     period: "2022 - 2023"
     description: >-
-      Full time consultant for Saab AB.
+      Full time consultant for Saab AB first with Nexer Infrastructure and later Brickstone AB.
       Responsibilities included developing and maintaining internal tools for the development environment, managing CI/CD pipelines, and providing user support to developers.
     responsibilities:
       - Developed CLI tools and built Docker containers including automation of releases
@@ -73,10 +75,10 @@ experience:
       - Powershell and PSADT
 
   - title: IT Consultant
-    company: Atea Sverige
-    period: "2018-2019"
+    company: Talangjägarna Consulting AB & Atea Sverige
+    period: "2017-2019"
     description: |
-      Directly hired by Atea after my time with Talangjägarna. Switches teams within Atea to a team of senior generalist technicians, providing IT support and project management for clients lacking dedicated IT departments or needing additional personnel.
+      Worked as part of Atea's Onsite Services team, first as a consultant and later on directly hired by Atea. Provided direct support to clients in their daily operations.
     responsibilities:
       - Managed Windows 10 clients and mobile devices
       - Participated in network migration projects, replacing hardware with Cisco Meraki
@@ -85,6 +87,8 @@ experience:
       - Offered on-site technical support
       - Administered server and network infrastructure
       - Re-imaging of computers
+      - Facilitated large video conferences
+      - Printer maintenance and troubleshooting
     achievments:
       - Migrated customer client deployment from Clonezilla to MDT setup accelerating deployment of client computers
     technologies:
@@ -97,20 +101,7 @@ experience:
       - Microsoft Server
       - Windows 10
       - Active Directory
-
-  - title: IT Consultant
-    company: Talangjägarna Consulting AB for Atea Sverige
-    period: "2017"
-    description: |
-      Worked as part of Atea's Onsite Services team, providing direct support to clients in their daily operations.
-    responsibilities:
-      - Conducted technical tests and facilitated large video conferences
-      - Managed printer maintenance and troubleshooting
-      - Performed client reinstallation and general troubleshooting
-    technologies:
       - Cisco Video Systems
-      - Active Directory
-      - Windows 10
       - Printers
 
   - title: Service Desk Technician & IT Consultant
@@ -160,9 +151,9 @@ certificates:
     year: "2017"
 
 languages:
-  - Swedish
-  - English
-  - Japanese
+  - Swedish - Native
+  - English - Fluent
+  - Japanese - Fluent, daily-conversational
 
 personal_projects:
   - area: Networking
