@@ -32,7 +32,7 @@ experience:
       - Automation using jenkins for CI/CD pipelines with scripted pipeline framework
       - Working with 9LV software platform
       - Knowledge sharing by documentation and presentations
-      - Technical advisor as part of Saab Naval Combat Systems office relocation project
+      - Technical advisor as part of internal office relocation project
     achievments:
       - Rewrote ansible code to fully maintain build environment infrastructure with configuration as code
       - Automated agent bootstrapping using generic image accelerating build environment deployment
